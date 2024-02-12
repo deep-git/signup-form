@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", "Roboto", sans-serif;
+}
+
+:root {
+    --background-blue: #0066b2;
+    --background-white: #ecf0f1;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+/* CONTAINER LEFT CONTENT */
+
+.container_left {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-blue);
+}
+
+.container_left > h1 {
+    text-transform: uppercase;
+    position: absolute;
+    color: white;
+    letter-spacing: 0.1em;
+    font-size: 5em;
+}
+
+.container_left > img {
+    object-fit: cover;
+}
+
+/* CONTAINER RIGHT CONTENT */
+
+.container_right {
+    width: 60%;
+    background-color: var(--background-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container_right > h2 {
+    display: flex;
+    align-items: end;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 5px;
+    margin-bottom: 4%;
+    color: var(--background-blue);
+    font-size: 2em;
+    width: 50%;
+    border-bottom: 5px solid;
+}
+
+/* SIGNUP AND LOGIN */
+
+.signup_info {
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    padding: 4%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.login_info {
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    padding: 4%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.form_signup {
+    margin-top: 20px;
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+    row-gap: 15px;
+}
+
+.form_login {
+    margin-top: 20px;
+    width: 25%;
+    display: grid;
+    column-gap: 100px;
+    row-gap: 15px;
+}
+
+.form_signup > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_login > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_signup > div > label {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 14px;
+}
+
+.form_login > div > label {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 14px;
+}
+
+.form_signup > div > input {
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid var(--background-white);
+    padding: 5px;
+}
+
+.form_login > div > input {
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid var(--background-white);
+    padding: 5px;
+}
+
+.form_signup > div > input:focus {
+    outline: 2px solid var(--background-blue);
+}
+
+.form_login > div > input:focus {
+    outline: 2px solid var(--background-blue);
+}
+
+/* BOTTOM LAYER BUTTON CONTENT */
+
+.bottom_layer {
+    margin-top: 50px;
+    padding-left: 4%;
+}
+
+.bottom_layer > button {
+    padding: 10px 40px;
+    font-size: 1em;
+    border-radius: 10px;
+    border: 1px solid var(--background-blue);
+    background-color: var(--background-blue);
+    color: white;
+    font-weight: bold;
+}
+
+.bottom_layer > button:hover {
+    background-color: #015799;
+    border: 1px solid #015799;
+    transition: 0.1s all ease-in;
+}
+
+.bottom_layer > p {
+    margin-top: 25px;
+}
+
+.bottom_layer > p > a {
+    text-decoration: none;
+    color: var(--background-blue);
+    font-weight: bold;
+}
+
+/* RESPONSIVE STYLES */
+
+@media only screen and (max-width: 1024px) {
+    .container_left > h1 {
+        font-size: 3.5em;
+        transition: 0.5s all ease-in;
+    }
+
+    .container_right > h2 {
+        font-size: 1.5em;
+    }
+
+    .form_signup {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container_left > h1 {
+        font-size: 2.5em;
+        transition: 0.5s all ease-in;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+    }
+
+    .container_right > h2 {
+        width: 100%;
+    }
+
+    .bottom_layer > p {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .bottom_layer > button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .container_right > h2 {
+        font-size: 1.1em;
+        width: 100%;
+    }
+    
+    .bottom_layer > p {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .form_signup > div > input {
+        width: 160px;
+    }
+
+    .form_login > div > input {
+        width: 160px;
+    }
+
+    .bottom_layer > p {
+        font-size: 10px;
+    }
+}
+
+
+
