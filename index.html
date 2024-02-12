@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container_left">
+            <img src="images/backgroundpic.jpg" width="100%" height="100%" alt="background image">
+            <h1>Library</h1>
+        </div>
+        <div class="container_right">
+            <h2>Sign-up Form</h2>
+            <div class="signup_info">
+                <p>Sign up now!</p>
+                <form action="index.html" class="form_signup" id="form_signup">
+                    <div>
+                        <label for="fname">First Name</label>
+                        <input id="fname" type="text" required>
+                    </div>
+
+                    <div>
+                        <label for="lname">Last Name</label>
+                        <input id="lname" type="text" required>
+                    </div>
+
+                    <div>
+                        <label for="email">Email</label>
+                        <input id="email" type="email" required>
+                    </div>
+
+                    <div>
+                        <label for="phone_num">Phone Number</label>
+                        <input id="phone_num" type="text">
+                    </div>
+
+                    <div>
+                        <label for="password">Password</label>
+                        <input id="password" type="password" required>
+                    </div>
+
+                    <div>
+                        <label for="cpassword">Confirm Password</label>
+                        <input id="cpassword" type="password" required>
+                    </div>
+                </form>
+            </div>
+            <div class="bottom_layer">
+                <button id="submit_button" type="submit" value="Send" onclick="comparePasswords()" form="form_signup">Create Account</button>
+                <p>Already have an account? <a href="/login.html">Log in</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
